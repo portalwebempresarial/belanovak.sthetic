@@ -1,1 +1,131 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipopapada Sin Cirugía - Belanovak Sthetic</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts para replicar la identidad de marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fdf7f9',
+                            mauve: '#d59fb5', /* Color rosa/malva de los botones */
+                            dark: '#4a3842',  /* Color de texto oscuro */
+                            pink: '#f0a3c2'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Cinzel', 'serif'],
+                        'cursive': ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Fondo degradado suave */
+        body {
+            background: linear-gradient(135deg, #fdf7f9 0%, #f3e1e8 100%);
+        }
+        /* Efecto neón rosa para "Sin cirugía" */
+        .neon-text {
+            color: #ffb8d1;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f0a3c2, 0 0 35px #f0a3c2;
+        }
+        /* Decoración floral sutil de fondo (opcional) */
+        .bg-pattern {
+            background-image: radial-gradient(#d59fb5 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="text-brand-dark min-h-screen font-sans antialiased relative">
+    
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 bg-pattern pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto py-10 px-4 sm:px-6">
+        
+        <!-- HEADER / TÍTULO -->
+        <header class="text-center mb-16 relative pt-6">
+            <p class="text-sm tracking-widest text-brand-dark/70 mb-4 font-semibold">@BELANOVAK.STHETIC</p>
+            <h1 class="text-5xl md:text-7xl font-serif tracking-widest text-brand-dark uppercase">Lipopapada</h1>
+            <p class="font-cursive text-5xl md:text-7xl neon-text absolute -bottom-8 left-1/2 transform -translate-x-1/2 -rotate-3 w-full">
+                Sin cirugía!
+            </p>
+        </header>
+
+        <!-- SECCIÓN DEL VIDEO (Con controles y volumen) -->
+        <section class="max-w-2xl mx-auto bg-white p-3 md:p-4 rounded-[2rem] shadow-xl border border-white/50 mb-12 transform hover:scale-[1.01] transition-transform duration-300">
+            <div class="rounded-[1.5rem] overflow-hidden bg-black relative">
+                <!-- Atributo 'controls' añadido para volumen, pausa y pantalla completa -->
+                <video controls playsinline class="w-full h-auto max-h-[500px] object-cover">
+                    <!-- Nombre exacto del archivo de video -->
+                    <source src="reel lipopapada.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
+            <p class="text-xs text-center text-gray-400 mt-3 font-light">Reproduce el video para conocer el procedimiento</p>
+        </section>
+
+        <!-- SECCIÓN DE IMAGEN DE OFERTA -->
+        <section class="max-w-2xl mx-auto bg-white p-3 md:p-4 rounded-[2rem] shadow-xl border border-white/50 mb-12">
+            <div class="rounded-[1.5rem] overflow-hidden">
+                <!-- Nombre exacto del archivo de imagen subido -->
+                <img src="lipopapadaanuncio.jpeg" alt="Promoción Lipopapada 850.000" class="w-full h-auto object-cover">
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE AGENDAMIENTO (Botones de WhatsApp) -->
+        <section class="max-w-lg mx-auto bg-[#efe1e7] p-8 rounded-[2rem] shadow-lg border border-white/60 text-center">
+            <h2 class="text-2xl font-serif mb-2 text-brand-dark">Agenda tu Valoración</h2>
+            <p class="text-sm text-brand-dark/70 mb-8 font-light">Aprovecha nuestro descuento de aniversario por tiempo limitado.</p>
+            
+            <div class="flex flex-col gap-4">
+                
+                <!-- Botón Virtual -->
+                <a href="https://wa.me/573132797506?text=Hola,%20quiero%20aprovechar%20la%20promoción%20de%20Lipopapada.%20Deseo%20agendar%20una%20valoración%20VIRTUAL." 
+                   target="_blank" 
+                   class="bg-brand-mauve hover:bg-[#c487a0] text-white py-4 px-6 rounded-full font-semibold text-lg flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <!-- Icono de cámara para virtual -->
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    Valoración Virtual
+                </a>
+                
+                <!-- Botón Presencial -->
+                <a href="https://wa.me/573132797506?text=Hola,%20quiero%20aprovechar%20la%20promoción%20de%20Lipopapada.%20Deseo%20agendar%20una%20valoración%20PRESENCIAL." 
+                   target="_blank" 
+                   class="bg-brand-mauve hover:bg-[#c487a0] text-white py-4 px-6 rounded-full font-semibold text-lg flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <!-- Icono de ubicación para presencial -->
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    Valoración Presencial
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER / ESLOGAN -->
+        <footer class="text-center mt-16 pb-8">
+            <div class="h-px w-24 bg-brand-mauve/50 mx-auto mb-6"></div>
+            <p class="font-serif text-xl text-brand-dark/80 italic">"Cada mirada encuentra su propio mensaje."</p>
+        </footer>
+
+    </div>
+</body>
+</html>
