@@ -8,7 +8,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts para replicar la identidad de marca -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
                     colors: {
                         brand: {
                             light: '#fdf7f9',
-                            mauve: '#d59fb5', /* Color rosa/malva de los botones */
-                            dark: '#4a3842',  /* Color de texto oscuro */
+                            mauve: '#d59fb5', 
+                            dark: '#4a3842',  
                             pink: '#f0a3c2'
                         }
                     },
@@ -37,16 +37,13 @@
     </script>
     
     <style>
-        /* Fondo degradado suave */
         body {
             background: linear-gradient(135deg, #fdf7f9 0%, #f3e1e8 100%);
         }
-        /* Efecto neón rosa para "Sin cirugía" */
         .neon-text {
             color: #ffb8d1;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f0a3c2, 0 0 35px #f0a3c2;
         }
-        /* Decoración floral sutil de fondo */
         .bg-pattern {
             background-image: radial-gradient(#d59fb5 0.5px, transparent 0.5px);
             background-size: 20px 20px;
@@ -57,10 +54,9 @@
 </head>
 <body class="text-brand-dark min-h-screen font-sans antialiased relative">
     
-    <!-- Fondo decorativo -->
     <div class="absolute inset-0 bg-pattern pointer-events-none z-0"></div>
 
-    <div class="relative z-10 max-w-4xl mx-auto py-10 px-4 sm:px-6">
+    <div class="relative z-10 max-w-5xl mx-auto py-10 px-4 sm:px-6">
         
         <!-- HEADER / TÍTULO -->
         <header class="text-center mb-16 relative pt-6">
@@ -83,21 +79,27 @@
             <p class="text-xs text-center text-gray-400 mt-3 font-light">Reproduce el video para conocer el procedimiento</p>
         </section>
 
-        <!-- SECCIÓN DE RESULTADOS (Antes y Después) -->
-        <section class="max-w-2xl mx-auto bg-white p-3 md:p-4 rounded-[2rem] shadow-xl border border-white/50 mb-12">
-            <h2 class="text-2xl font-serif text-center mb-4 text-brand-dark">Resultados Reales</h2>
-            <div class="rounded-[1.5rem] overflow-hidden">
-                <!-- Imagen 'anges y despues lipopapada.jpeg' del repositorio -->
-                <img src="anges y despues lipopapada.jpeg" alt="Resultados Antes y Después Lipopapada" class="w-full h-auto object-cover">
-            </div>
-        </section>
+        <!-- SECCIÓN DE LAS DOS IMÁGENES (MEDIANAS) -->
+        <section class="w-full mx-auto mb-12">
+            <!-- Grid que pone 1 columna en celulares y 2 columnas en PC/Tablets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Imagen 1: Antes y Después -->
+                <div class="bg-white p-3 rounded-[2rem] shadow-xl border border-white/50 flex flex-col justify-center">
+                    <h2 class="text-xl font-serif text-center mb-3 text-brand-dark">Resultados Reales</h2>
+                    <div class="rounded-[1.5rem] overflow-hidden">
+                        <img src="anges y despues lipopapada.jpeg" alt="Resultados Antes y Después" class="w-full h-auto object-cover">
+                    </div>
+                </div>
 
-        <!-- SECCIÓN DE IMAGEN DE OFERTA -->
-        <section class="max-w-2xl mx-auto bg-white p-3 md:p-4 rounded-[2rem] shadow-xl border border-white/50 mb-12">
-            <h2 class="text-2xl font-serif text-center mb-4 text-brand-dark">Nuestra Oferta</h2>
-            <div class="rounded-[1.5rem] overflow-hidden">
-                <!-- Imagen 'lipopapadaanuncio.jpeg' del repositorio -->
-                <img src="lipopapadaanuncio.jpeg" alt="Promoción Lipopapada 850.000" class="w-full h-auto object-cover">
+                <!-- Imagen 2: Oferta y Precios -->
+                <div class="bg-white p-3 rounded-[2rem] shadow-xl border border-white/50 flex flex-col justify-center">
+                    <h2 class="text-xl font-serif text-center mb-3 text-brand-dark">Descuento Aniversario</h2>
+                    <div class="rounded-[1.5rem] overflow-hidden">
+                        <img src="lipopapadaanuncio.jpeg.jpg" alt="Precio de Oferta Lipopapada" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
             </div>
         </section>
 
